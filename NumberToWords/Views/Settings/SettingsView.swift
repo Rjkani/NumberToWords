@@ -61,7 +61,7 @@ struct SettingsView: View{
                                 selectedSettings = language.name
                                 UserDefaults.standard.set( "\(language.name)|\(language.identifier)", forKey: "Language")
                             }
-                            .listRowBackground(language.name == selectedSettings ? Color.red : nil)
+                            .listRowBackground(language.name == selectedSettings ? Color.gray : nil)
 
                     }
                 }
