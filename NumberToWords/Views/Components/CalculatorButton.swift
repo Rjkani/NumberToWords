@@ -42,10 +42,23 @@ extension CalculatorView {
         }
         
         private func getButtonSize() -> CGFloat {
-            let screenWidth = UIScreen.main.bounds.width
-            let buttonCount: CGFloat = 5
-            let spacingCount = buttonCount
+            
+            let screenWidth = getScreenWidth()//UIScreen.main.bounds.width
+            let buttonCount: CGFloat = 6
+            let spacingCount = buttonCount + 4
             return (screenWidth - (spacingCount * Constants.padding)) / buttonCount
+        }
+        
+        private func getScreenWidth() -> CGFloat{
+            var screenWidth: CGFloat
+            switch UIDevice.current.orientation.rawValue{
+            case 1, 2:
+                screenWidth = UIScreen.main.bounds.width
+            default:
+                screenWidth = UIScreen.main.bounds.height
+                
+            }
+            return screenWidth
         }
     }
 }

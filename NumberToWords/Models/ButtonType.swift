@@ -51,7 +51,7 @@ enum ButtonType: Hashable, CustomStringConvertible
         case .result:
             return .green
         case .copy:
-            return .gray
+            return .clear
         case .allClear:
             return .orange
         
@@ -64,8 +64,10 @@ enum ButtonType: Hashable, CustomStringConvertible
     
     var foregroundColor: Color{
         switch self{
-        case .allClear, .result, .copy:
+        case .allClear, .result:
             return .white
+        case .copy:
+            return .secondary
             
         default:
             return .white

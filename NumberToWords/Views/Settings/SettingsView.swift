@@ -43,8 +43,8 @@ struct SettingsView: View{
                     Image(systemName: "xmark").imageScale(.medium)
                 }.buttonStyle(CustomButtonStyle(
                     size: 80,
-                    backgroundColor: (Color.white),
-                    foregroundColor: (Color.black)
+                    backgroundColor: (Color.clear),
+                    foregroundColor: (Color.secondary)
                 ))
                 Text("Settings View")
                     .font(.largeTitle)
@@ -61,6 +61,8 @@ struct SettingsView: View{
                                 selectedSettings = language.name
                                 UserDefaults.standard.set( "\(language.name)|\(language.identifier)", forKey: "Language")
                             }
+                            .listRowBackground(language.name == selectedSettings ? Color.red : nil)
+
                     }
                 }
                 

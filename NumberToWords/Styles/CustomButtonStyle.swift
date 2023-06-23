@@ -32,7 +32,7 @@ struct CustomButtonStyle_Previews: PreviewProvider{
     static var previews: some View{
         Button(buttonType.description){}
             .buttonStyle(CustomButtonStyle(
-                size: 75,
+                size: 60,
                 backgroundColor: buttonType.backgroundColor,
                 foregroundColor:buttonType.foregroundColor
             )
