@@ -1,8 +1,8 @@
 //
-//  NumberToWordsApp.swift
-//  NumberToWords
+//  iCalculatorApp.swift
+//  iCalculator
 //
-//  Created by Priyalakshmi Rajakani on 22/06/23.
+//  Created by Priyalakshmi Rajakani on 20/06/23.
 //
 
 import SwiftUI
@@ -11,7 +11,8 @@ import SwiftUI
 struct NumberToWordsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CalculatorView()
+                .environmentObject(CalculatorView.ViewModel())
         }
     }
 }
